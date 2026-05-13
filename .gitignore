@@ -1,0 +1,4 @@
+node_modules/
+.vercel/
+# O zip é gerado no build — não versionar
+public/assets/brand-kit.zip

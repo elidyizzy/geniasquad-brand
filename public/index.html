@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEN.IA SQUAD — Brand Kit</title>
+<meta name="description" content="Assets oficiais da marca GEN.IA SQUAD. Logos, cores, tipografia e brand kit para download.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/assets/fonts/Gilroy-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --lime:        #d1ff00;
+  --black:       #050505;
+  --surface:     #0f0f11;
+  --surface-alt: #23241d;
+  --cream:       #f5f4e7;
+  --warm-white:  #fdfbf2;
+  --meta:        #b0b0b0;
+  --border:      rgba(156,156,156,0.12);
+  --border-lime: rgba(209,255,0,0.2);
+  --lime-glow:   rgba(209,255,0,0.04);
+  --font-display: 'Gilroy', 'Arial Black', sans-serif;
+  --font-sans:    'Geist', system-ui, sans-serif;
+  --font-mono:    'Geist Mono', ui-monospace, monospace;
+  --ease:         cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out:     cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 60vh;
+  background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(209,255,0,0.07), transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── HEADER ── */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 0 clamp(24px, 5vw, 80px);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
+  border-bottom: 1px solid transparent;
+}
+
+header.scrolled {
+  background: rgba(5,5,5,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom-color: var(--border);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.header-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.header-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  color: var(--cream);
+}
+
+.header-name span { color: var(--lime); }
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--lime);
+  color: var(--black);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  padding: 9px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s var(--ease), transform 0.15s var(--ease);
+  white-space: nowrap;
+}
+
+.btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); opacity: 1; }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--cream);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 9px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid var(--border-lime);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s var(--ease);
+  white-space: nowrap;
+}
+
+.btn-outline:hover {
+  border-color: var(--lime);
+  background: rgba(209,255,0,0.06);
+  transform: translateY(-1px);
+}
+
+/* ── SECTIONS ── */
+section { position: relative; z-index: 1; }
+
+.container {
+  width: min(100% - clamp(32px, 8vw, 160px), 1120px);
+  margin: 0 auto;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 20px;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: var(--lime);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(32px, 5vw, 52px);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--cream);
+  margin-bottom: 12px;
+}
+
+.section-desc {
+  font-size: 16px;
+  color: var(--meta);
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+/* ── HERO ── */
+.hero {
+  padding: clamp(140px, 18vh, 200px) 0 clamp(80px, 12vh, 140px);
+  text-align: center;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(209,255,0,0.07);
+  border: 1px solid var(--border-lime);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--lime);
+  margin-bottom: 36px;
+  text-transform: uppercase;
+}
+
+.hero-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--lime);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(48px, 9vw, 96px);
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--cream);
+  margin-bottom: 28px;
+}
+
+.hero-title em {
+  font-style: normal;
+  color: var(--lime);
+}
+
+.hero-sub {
+  font-size: clamp(16px, 2.2vw, 19px);
+  color: var(--meta);
+  max-width: 520px;
+  margin: 0 auto 48px;
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-actions .btn-primary {
+  font-size: 15px;
+  padding: 13px 28px;
+  border-radius: 8px;
+}
+
+.hero-meta {
+  margin-top: 20px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: rgba(176,176,176,0.5);
+  letter-spacing: 0.05em;
+}
+
+.hero-divider {
+  width: min(100% - 64px, 1120px);
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-lime), transparent);
+}
+
+/* ── LOGOS ── */
+.logos-section {
+  padding: clamp(80px, 10vh, 120px) 0;
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.logo-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.logo-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out),
+              border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+
+.logo-card:hover {
+  border-color: var(--lime);
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 0 32px rgba(209,255,0,0.08);
+}
+
+.logo-preview {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background-image:
+    linear-gradient(45deg, #1a1a1a 25%, transparent 25%),
+    linear-gradient(-45deg, #1a1a1a 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #1a1a1a 75%),
+    linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+.logo-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.logo-info {
+  padding: 16px 20px 20px;
+  border-top: 1px solid var(--border);
+}
+
+.logo-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+
+.logo-usage {
+  font-size: 12px;
+  color: var(--meta);
+  margin-bottom: 14px;
+  font-family: var(--font-mono);
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--lime);
+  text-decoration: none;
+  padding: 7px 14px;
+  border: 1px solid rgba(209,255,0,0.25);
+  border-radius: 5px;
+  transition: background 0.15s, border-color 0.15s;
+  font-family: var(--font-sans);
+}
+
+.btn-download:hover {
+  background: rgba(209,255,0,0.08);
+  border-color: var(--lime);
+}
+
+.btn-download svg { flex-shrink: 0; }
+
+/* ── COLORS ── */
+.colors-section {
+  padding: clamp(80px, 10vh, 120px) 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.color-group { margin-top: 48px; }
+.color-group + .color-group { margin-top: 40px; }
+
+.color-group-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--meta);
+  margin-bottom: 16px;
+}
+
+.colors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.color-swatch {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.15s var(--ease), border-color 0.15s;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.color-swatch.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out),
+              border-color 0.15s, box-shadow 0.15s;
+}
+
+.color-swatch:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.swatch-color {
+  height: 72px;
+  position: relative;
+}
+
+.swatch-copy-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.35);
+  opacity: 0;
+  transition: opacity 0.15s;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.color-swatch:hover .swatch-copy-hint { opacity: 1; }
+
+.swatch-info {
+  padding: 10px 12px;
+  background: rgba(15,15,17,0.8);
+}
+
+.swatch-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 2px;
+}
+
+.swatch-hex {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--meta);
+  letter-spacing: 0.05em;
+}
+
+/* ── TOAST ── */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1000;
+  background: var(--surface);
+  border: 1px solid var(--border-lime);
+  border-radius: 8px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--cream);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.25s var(--ease-out), opacity 0.25s var(--ease-out);
+  pointer-events: none;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lime);
+  flex-shrink: 0;
+}
+
+/* ── TYPOGRAPHY ── */
+.type-section {
+  padding: clamp(80px, 10vh, 120px) 0;
+}
+
+.type-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 48px;
+}
+
+@media (min-width: 768px) {
+  .type-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.type-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+
+.type-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.type-specimen {
+  margin-bottom: 24px;
+  min-height: 80px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.type-family-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 8px;
+}
+
+.type-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--meta);
+  margin-top: 12px;
+  line-height: 1.8;
+}
+
+.type-download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--lime);
+  text-decoration: none;
+  margin-top: 16px;
+  border-bottom: 1px solid rgba(209,255,0,0.3);
+  padding-bottom: 2px;
+  transition: border-color 0.15s;
+}
+
+.type-download-link:hover { border-color: var(--lime); }
+
+/* ── DOWNLOAD CTA ── */
+.download-section {
+  padding: clamp(80px, 10vh, 120px) 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.download-card {
+  background: linear-gradient(135deg, var(--lime) 0%, #a8cc00 100%);
+  border-radius: 20px;
+  padding: clamp(48px, 6vw, 72px);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .download-card { grid-template-columns: 1fr; }
+  .download-card-action { justify-self: start; }
+}
+
+.download-card::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.06);
+  pointer-events: none;
+}
+
+.download-card::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; right: 80px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.04);
+  pointer-events: none;
+}
+
+.download-card-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 44px);
+  letter-spacing: -0.03em;
+  color: var(--black);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.download-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.download-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(5,5,5,0.7);
+}
+
+.download-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(5,5,5,0.4);
+  flex-shrink: 0;
+}
+
+.download-card-action { position: relative; z-index: 1; }
+
+.btn-download-kit {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--black);
+  color: var(--lime);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 16px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.15s, transform 0.15s var(--ease);
+}
+
+.btn-download-kit:hover { opacity: 0.88; transform: translateY(-2px); }
+
+/* ── FOOTER ── */
+footer {
+  padding: 40px clamp(24px, 5vw, 80px);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-text {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: rgba(176,176,176,0.5);
+  letter-spacing: 0.04em;
+}
+
+.footer-link {
+  color: rgba(176,176,176,0.5);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.footer-link:hover { color: var(--lime); }
+
+/* ── NAV DOTS ── */
+.nav-dots {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 767px) { .nav-dots { display: none; } }
+
+.nav-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(176,176,176,0.3);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  border: none;
+  padding: 0;
+}
+
+.nav-dot.active {
+  background: var(--lime);
+  transform: scale(1.4);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 767px) {
+  .logos-grid { grid-template-columns: 1fr 1fr; }
+  .colors-grid { grid-template-columns: 1fr 1fr; }
+  footer { justify-content: center; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .logos-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <a href="#" class="header-brand">
+    <img src="/assets/logos/gs-icon-white.png" alt="GEN.IA SQUAD" class="header-logo">
+    <span class="header-name">GEN.IA <span>SQUAD</span></span>
+  </a>
+  <a href="/assets/brand-kit.zip" download class="btn-primary">
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Download Brand Kit
+  </a>
+</header>
+
+<!-- NAV DOTS -->
+<nav class="nav-dots" aria-hidden="true">
+  <button class="nav-dot active" data-section="hero" title="Início"></button>
+  <button class="nav-dot" data-section="logos" title="Logos"></button>
+  <button class="nav-dot" data-section="colors" title="Cores"></button>
+  <button class="nav-dot" data-section="typography" title="Tipografia"></button>
+  <button class="nav-dot" data-section="download" title="Download"></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="container" style="display:flex;flex-direction:column;align-items:center;">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      Brand Kit Oficial · v1.0
+    </div>
+    <h1 class="hero-title">
+      Marca. Assets.<br><em>Pronto para usar.</em>
+    </h1>
+    <p class="hero-sub">
+      Tudo que o time precisa para aplicar a identidade GEN.IA SQUAD com consistência — em qualquer projeto.
+    </p>
+    <div class="hero-actions">
+      <a href="/assets/brand-kit.zip" download class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Baixar Brand Kit .zip
+      </a>
+      <a href="#logos" class="btn-outline">Ver assets</a>
+    </div>
+    <p class="hero-meta">PNG · OTF · CSS · MARKDOWN &nbsp;·&nbsp; Sempre atualizado</p>
+  </div>
+</section>
+
+<div class="hero-divider"></div>
+
+<!-- LOGOS -->
+<section class="logos-section" id="logos">
+  <div class="container">
+    <span class="section-label">Assets</span>
+    <h2 class="section-title">Logos</h2>
+    <p class="section-desc">Todas as variações do logo para cada contexto de uso. Clique em "Baixar" para fazer download individual.</p>
+
+    <div class="logos-grid">
+
+      <div class="logo-card" data-animate>
+        <div class="logo-preview" style="background-color:#f5f4e7;">
+          <img src="/assets/logos/gs-icon-lime.png" alt="Ícone Lime">
+        </div>
+        <div class="logo-info">
+          <div class="logo-name">Ícone Lime</div>
+          <div class="logo-usage">Fundos claros</div>
+          <a href="/assets/logos/gs-icon-lime.png" download class="btn-download">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Baixar PNG
+          </a>
+        </div>
+      </div>
+
+      <div class="logo-card" data-animate>
+        <div class="logo-preview" style="background-color:#f5f4e7;">
+          <img src="/assets/logos/gs-icon-black.png" alt="Ícone P&B">
+        </div>
+        <div class="logo-info">
+          <div class="logo-name">Ícone P&B</div>
+          <div class="logo-usage">Impressão, documentos</div>
+          <a href="/assets/logos/gs-icon-black.png" download class="btn-download">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Baixar PNG
+          </a>
+        </div>
+      </div>
+
+      <div class="logo-card" data-animate>
+        <div class="logo-preview" style="background-color:#f5f4e7;">
+          <img src="/assets/logos/gs-icon-black-lime.png" alt="Ícone Preto + Lime">
+        </div>
+        <div class="logo-info">
+          <div class="logo-name">Ícone Preto + Lime</div>
+          <div class="logo-usage">Versão premium</div>
+          <a href="/assets/logos/gs-icon-black-lime.png" download class="btn-download">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Baixar PNG
+          </a>
+        </div>
+      </div>
+
+      <div class="logo-card" data-animate>
+        <div class="logo-preview" style="background-color:#0f0f11;">
+          <img src="/assets/logos/gs-icon-white.png" alt="Ícone Branco">
+        </div>
+        <div class="logo-info">
+          <div class="logo-name">Ícone Branco</div>
+          <div class="logo-usage">Fundos escuros</div>
+          <a href="/assets/logos/gs-icon-white.png" download class="btn-download">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Baixar PNG
+          </a>
+        </div>
+      </div>
+
+      <div class="logo-card" data-animate>
+        <div class="logo-preview" style="background-color:#050505;">
+          <img src="/assets/logos/gs-icon-glow.png" alt="Ícone Glow">
+        </div>
+        <div class="logo-info">
+          <div class="logo-name">Ícone Glow</div>
+          <div class="logo-usage">Impacto máximo</div>
+          <a href="/assets/logos/gs-icon-glow.png" download class="btn-download">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Baixar PNG
+          </a>
+        </div>
+      </div>
+
+      <div class="logo-card" data-animate>
+        <div class="logo-preview" style="background-color:#050505;padding:24px 40px;">
+          <img src="/assets/logos/gs-wordmark-lime.png" alt="Wordmark">
+        </div>
+        <div class="logo-info">
+          <div class="logo-name">Wordmark</div>
+          <div class="logo-usage">Nome completo</div>
+          <a href="/assets/logos/gs-wordmark-lime.png" download class="btn-download">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Baixar PNG
+          </a>
+        </div>
+      </div>
+
+      <div class="logo-card" data-animate>
+        <div class="logo-preview" style="background-color:#050505;">
+          <img src="/assets/logos/gs-logo-full-glow.png" alt="Logo Completo">
+        </div>
+        <div class="logo-info">
+          <div class="logo-name">Logo Completo</div>
+          <div class="logo-usage">Hero sections</div>
+          <a href="/assets/logos/gs-logo-full-glow.png" download class="btn-download">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Baixar PNG
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COLORS -->
+<section class="colors-section" id="colors">
+  <div class="container">
+    <span class="section-label">Identidade</span>
+    <h2 class="section-title">Paleta de Cores</h2>
+    <p class="section-desc">Clique em qualquer cor para copiar o hex para a área de transferência.</p>
+
+    <div class="color-group">
+      <div class="color-group-label">Primárias</div>
+      <div class="colors-grid">
+        <div class="color-swatch" data-hex="#d1ff00" data-animate>
+          <div class="swatch-color" style="background:#d1ff00;">
+            <div class="swatch-copy-hint">Copiar</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">GS Lime</div>
+            <div class="swatch-hex">#d1ff00</div>
+          </div>
+        </div>
+        <div class="color-swatch" data-hex="#050505" data-animate>
+          <div class="swatch-color" style="background:#050505;border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div class="swatch-copy-hint">Copiar</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">GS Black</div>
+            <div class="swatch-hex">#050505</div>
+          </div>
+        </div>
+        <div class="color-swatch" data-hex="#0f0f11" data-animate>
+          <div class="swatch-color" style="background:#0f0f11;border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div class="swatch-copy-hint">Copiar</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">GS Surface</div>
+            <div class="swatch-hex">#0f0f11</div>
+          </div>
+        </div>
+        <div class="color-swatch" data-hex="#f5f4e7" data-animate>
+          <div class="swatch-color" style="background:#f5f4e7;">
+            <div class="swatch-copy-hint">Copiar</div>
+          </div>
+          <div class="swatch-info" style="background:rgba(245,244,231,0.08);">
+            <div class="swatch-name">GS Cream</div>
+            <div class="swatch-hex">#f5f4e7</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="color-group">
+      <div class="color-group-label">Secundárias</div>
+      <div class="colors-grid">
+        <div class="color-swatch" data-hex="#0099ff" data-animate>
+          <div class="swatch-color" style="background:#0099ff;"><div class="swatch-copy-hint">Copiar</div></div>
+          <div class="swatch-info"><div class="swatch-name">GS Blue</div><div class="swatch-hex">#0099ff</div></div>
+        </div>
+        <div class="color-swatch" data-hex="#d96a3f" data-animate>
+          <div class="swatch-color" style="background:#d96a3f;"><div class="swatch-copy-hint">Copiar</div></div>
+          <div class="swatch-info"><div class="swatch-name">GS Flare</div><div class="swatch-hex">#d96a3f</div></div>
+        </div>
+        <div class="color-swatch" data-hex="#fdfbf2" data-animate>
+          <div class="swatch-color" style="background:#fdfbf2;"><div class="swatch-copy-hint">Copiar</div></div>
+          <div class="swatch-info" style="background:rgba(253,251,242,0.08);"><div class="swatch-name">GS Warm White</div><div class="swatch-hex">#fdfbf2</div></div>
+        </div>
+        <div class="color-swatch" data-hex="#23241d" data-animate>
+          <div class="swatch-color" style="background:#23241d;border-bottom:1px solid rgba(255,255,255,0.06);"><div class="swatch-copy-hint">Copiar</div></div>
+          <div class="swatch-info"><div class="swatch-name">GS Surface Alt</div><div class="swatch-hex">#23241d</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="color-group">
+      <div class="color-group-label">Funcionais</div>
+      <div class="colors-grid">
+        <div class="color-swatch" data-hex="#10b981" data-animate>
+          <div class="swatch-color" style="background:#10b981;"><div class="swatch-copy-hint">Copiar</div></div>
+          <div class="swatch-info"><div class="swatch-name">Success</div><div class="swatch-hex">#10b981</div></div>
+        </div>
+        <div class="color-swatch" data-hex="#f5b340" data-animate>
+          <div class="swatch-color" style="background:#f5b340;"><div class="swatch-copy-hint">Copiar</div></div>
+          <div class="swatch-info"><div class="swatch-name">Warning</div><div class="swatch-hex">#f5b340</div></div>
+        </div>
+        <div class="color-swatch" data-hex="#ef4444" data-animate>
+          <div class="swatch-color" style="background:#ef4444;"><div class="swatch-copy-hint">Copiar</div></div>
+          <div class="swatch-info"><div class="swatch-name">Error</div><div class="swatch-hex">#ef4444</div></div>
+        </div>
+        <div class="color-swatch" data-hex="#b0b0b0" data-animate>
+          <div class="swatch-color" style="background:#b0b0b0;"><div class="swatch-copy-hint">Copiar</div></div>
+          <div class="swatch-info"><div class="swatch-name">Meta</div><div class="swatch-hex">#b0b0b0</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TYPOGRAPHY -->
+<section class="type-section" id="typography">
+  <div class="container">
+    <span class="section-label">Identidade</span>
+    <h2 class="section-title">Tipografia</h2>
+    <p class="section-desc">Três famílias com papéis distintos — nenhuma substituível pela outra.</p>
+
+    <div class="type-grid">
+
+      <div class="type-card" data-animate>
+        <div class="type-family-label">Gilroy ExtraBold</div>
+        <div class="type-specimen">
+          <div style="font-family:'Gilroy','Arial Black',sans-serif;font-weight:800;font-size:clamp(36px,5vw,52px);letter-spacing:-0.04em;line-height:0.95;color:var(--lime);">GEN.IA<br>SQUAD</div>
+        </div>
+        <div class="type-meta">
+          Display · Headlines · Wordmark<br>
+          Weight: 800<br>
+          Letter-spacing: -0.04em
+        </div>
+        <a href="/assets/fonts/Gilroy-ExtraBold.otf" download class="type-download-link">
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Baixar Gilroy
+        </a>
+      </div>
+
+      <div class="type-card" data-animate>
+        <div class="type-family-label">Geist</div>
+        <div class="type-specimen">
+          <p style="font-family:'Geist',sans-serif;font-size:15px;line-height:1.65;color:var(--cream);font-weight:400;">Squads de agentes IA construídos para automatizar, acelerar e entregar resultado real no seu negócio.</p>
+        </div>
+        <div class="type-meta">
+          Interface · Corpo · Botões<br>
+          Weights: 400 / 500 / 600 / 700<br>
+          Line-height: 1.6–1.7
+        </div>
+      </div>
+
+      <div class="type-card" data-animate>
+        <div class="type-family-label">Geist Mono</div>
+        <div class="type-specimen">
+          <pre style="font-family:'Geist Mono',monospace;font-size:13px;line-height:1.65;color:var(--cream);font-weight:400;overflow:hidden;"><code><span style="color:var(--lime)">const</span> squad = {
+  name: <span style="color:#d96a3f">"creators"</span>,
+  agents: <span style="color:#0099ff">11</span>,
+  status: <span style="color:#10b981">"active"</span>
+}</code></pre>
+        </div>
+        <div class="type-meta">
+          Código · Labels · Dados<br>
+          Weights: 400 / 500 / 600<br>
+          Font-size: 13–14px
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD CTA -->
+<section class="download-section" id="download">
+  <div class="container">
+    <div class="download-card">
+      <div class="download-card-content">
+        <div class="download-card-title">Brand Kit<br>Completo</div>
+        <ul class="download-list">
+          <li>7 variações de logo em PNG</li>
+          <li>Fontes Gilroy ExtraBold + Light</li>
+          <li>BRAND.md — guia completo de marca</li>
+          <li>Variáveis CSS prontas para uso</li>
+          <li>Paleta em todos os formatos</li>
+        </ul>
+      </div>
+      <div class="download-card-action">
+        <a href="/assets/brand-kit.zip" download class="btn-download-kit">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Baixar .zip
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-text">GEN.IA SQUAD © 2026</span>
+  <span class="footer-text">
+    <a href="https://github.com/elidyizidio" class="footer-link" target="_blank" rel="noopener">@elidyizidio</a>
+    &nbsp;·&nbsp; Todos os direitos reservados
+  </span>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <span class="toast-dot"></span>
+  <span id="toast-msg">Copiado!</span>
+</div>
+
+<script>
+// Header scroll
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// Animate on scroll
+const animatedEls = document.querySelectorAll('[data-animate]');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const siblings = [...el.parentElement.querySelectorAll('[data-animate]')];
+      const idx = siblings.indexOf(el);
+      setTimeout(() => el.classList.add('visible'), idx * 60);
+      observer.unobserve(el);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+animatedEls.forEach(el => observer.observe(el));
+
+// Copy hex
+let toastTimer;
+const toast = document.getElementById('toast');
+const toastMsg = document.getElementById('toast-msg');
+
+document.querySelectorAll('.color-swatch').forEach(swatch => {
+  swatch.addEventListener('click', () => {
+    const hex = swatch.dataset.hex;
+    navigator.clipboard.writeText(hex).then(() => {
+      toastMsg.textContent = `Copiado! ${hex}`;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+    });
+  });
+});
+
+// Nav dots
+const sections = ['hero','logos','colors','typography','download'];
+const dots = document.querySelectorAll('.nav-dot');
+
+dots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    document.getElementById(dot.dataset.section)?.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+const sectionEls = sections.map(id => document.getElementById(id)).filter(Boolean);
+const dotObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const idx = sectionEls.indexOf(entry.target);
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    }
+  });
+}, { threshold: 0.4 });
+sectionEls.forEach(el => dotObserver.observe(el));
+</script>
+</body>
+</html>

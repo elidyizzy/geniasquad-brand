@@ -1,0 +1,14 @@
+{
+  "name": "geniasquad-brand",
+  "version": "1.0.0",
+  "description": "GEN.IA SQUAD — Brand Kit público",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve public -p 3000",
+    "build": "node scripts/build-kit.js",
+    "prebuild": "node scripts/build-kit.js"
+  },
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}
