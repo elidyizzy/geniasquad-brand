@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "geniasquad-brand",
+  "buildCommand": "node scripts/build-kit.js",
   "outputDirectory": "public",
   "headers": [
     {
