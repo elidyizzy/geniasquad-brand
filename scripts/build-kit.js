@@ -60,13 +60,21 @@ async function buildZip() {
   // Coletar assets
   const logoFiles = collectFiles(path.join(ASSETS, 'logos'), ASSETS);
   const fontFiles = collectFiles(path.join(ASSETS, 'fonts'), ASSETS);
-  const brandMd   = path.join(__dirname, '..', '..', '..', 'geniasquad-creators', 'designsystem', 'brand', 'BRAND.md');
+  const brandMd    = path.join(__dirname, '..', '..', '..', 'geniasquad-creators', 'designsystem', 'brand', 'BRAND.md');
+  const designMd   = path.join(__dirname, '..', '..', '..', 'geniasquad-creators', 'designsystem', 'brand', 'DESIGN.md');
+  const designMdLocal = path.join(ASSETS, 'DESIGN.md');
 
   const entries = [...logoFiles, ...fontFiles];
 
   // Incluir BRAND.md se existir
   if (fs.existsSync(brandMd)) {
     entries.push({ full: brandMd, rel: 'BRAND.md' });
+  }
+
+  // Incluir DESIGN.md — tenta o repo externo, cai no local (public/assets)
+  const designMdPath = fs.existsSync(designMd) ? designMd : fs.existsSync(designMdLocal) ? designMdLocal : null;
+  if (designMdPath) {
+    entries.push({ full: designMdPath, rel: 'DESIGN.md' });
   }
 
   // Incluir CSS de tokens inline
